@@ -92,49 +92,11 @@ I prepared two models based on weekly and monthly datasets.
 Probably, there could be some variables which will behave differently in these models.
 Otherwise the monthly model can be as a proof for same observations in weekly model (as control model). 
 I will not describe monthly model, but it can be found in Solution.ipynb to check.
+After applying behavioral findings and setting Ordinary Least Squares (OLS) model, we receive results:
+<img width="1042" height="675" alt="image" src="https://github.com/user-attachments/assets/6d4837d6-01f2-455d-9d5e-4489eed2ea73" />
+<img width="1043" height="216" alt="image" src="https://github.com/user-attachments/assets/bd3bfdd8-a879-4ba6-b064-8e93524691eb" />
 
-                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:                  sales   R-squared:                       0.740
-Model:                            OLS   Adj. R-squared:                  0.698
-Method:                 Least Squares   F-statistic:                     17.79
-Date:                Thu, 22 Jan 2026   Prob (F-statistic):           1.88e-22
-Time:                        00:02:33   Log-Likelihood:                -1816.3
-No. Observations:                 117   AIC:                             3667.
-Df Residuals:                     100   BIC:                             3714.
-Df Model:                          16                                         
-Covariance Type:            nonrobust                                         
-===================================================================================================================
-                                                      coef    std err          t      P>|t|      [0.025      0.975]
--------------------------------------------------------------------------------------------------------------------
-investment_tv_adsMemory_diminishingReturns       1.805e+06   3.81e+05      4.740      0.000    1.05e+06    2.56e+06
-investment_radio_adsMemory_diminishingReturns    8.201e+05   1.13e+06      0.725      0.470   -1.42e+06    3.06e+06
-investment_press_adsMemory_diminishingReturns    1.513e+06   4.99e+05      3.029      0.003    5.22e+05     2.5e+06
-investment_banners_adsMemory_diminishingReturns -6.393e+04   3.97e+05     -0.161      0.872   -8.51e+05    7.23e+05
-investment_online_adsMemory_diminishingReturns   1.854e+06   4.36e+05      4.250      0.000    9.88e+05    2.72e+06
-investment_competition                             -0.0273      0.023     -1.180      0.241      -0.073       0.019
-investment_competition_1                           -0.0279      0.023     -1.192      0.236      -0.074       0.019
-investment_competition_2                            0.0067      0.021      0.317      0.752      -0.035       0.049
-competitor_recognition_1                         -1.74e+06   3.46e+06     -0.503      0.616    -8.6e+06    5.12e+06
-competitor_recognition_2                        -3.146e+06   3.44e+06     -0.916      0.362   -9.96e+06    3.67e+06
-public_holidays                                 -1.275e+06   2.23e+05     -5.732      0.000   -1.72e+06   -8.34e+05
-stores_opened                                    5.478e+04    1.6e+04      3.430      0.001    2.31e+04    8.65e+04
-economy_index                                    -344.8687    170.024     -2.028      0.045    -682.192      -7.546
-brand_knowledge                                  8.377e+06    3.8e+06      2.206      0.030    8.42e+05    1.59e+07
-weather_index                                   -9.084e+06   1.43e+06     -6.363      0.000   -1.19e+07   -6.25e+06
-precipitation_index                             -5268.3927   3705.978     -1.422      0.158   -1.26e+04    2084.163
-constant                                         2.497e+07   7.55e+06      3.307      0.001    9.99e+06       4e+07
-==============================================================================
-Omnibus:                        0.101   Durbin-Watson:                   1.928
-Prob(Omnibus):                  0.951   Jarque-Bera (JB):                0.257
-Skew:                          -0.038   Prob(JB):                        0.879
-Kurtosis:                       2.783   Cond. No.                     1.14e+09
-==============================================================================
 
-Notes:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-[2] The condition number is large, 1.14e+09. This might indicate that there are
-strong multicollinearity or other numerical problems.
 
 
 
