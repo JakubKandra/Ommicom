@@ -73,15 +73,11 @@ In my understanding, there is no reason to apply any correction to variables to 
 
 ### 6. Behavioral findings using diminishing returns and influencing ads immediately with memory
 - For diminishing returns we are using Hill function or S-curve:
-
-**Hill function**
 ```math
 f(x) = \frac{x^{\gamma}}{x^{\gamma}+k^{\gamma}}
 ```
 
 - For ads memory we are using "decay law":
-
-**Decay law**
 ```math
 x(t) = \mathrm{Investments}(t) + \lambda \cdot x(t-1), \mathrm{where} \ 0 \ \leq \ \lambda \ \leq \ 1
 ```
