@@ -7,7 +7,7 @@ Directory is composed by:
 - description of task: "homework_new_hires_v2026.html",
 - solution of task in iPython notebook: "Solution.ipynb",
 - slides as answer to client "SlidesForClient.pdf"
-- this file "Solution.md"
+- this file "README.md"
 
 ## 2. Joining weekly and monthly data
 - I think it is possible to join weekly and monthly data. I prepared a function ("from_weekly_to_monthly") which transfer weekly data to monthly. Idea explained in next points.
