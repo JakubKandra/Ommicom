@@ -116,26 +116,62 @@ Several variables (columns) look important (according p-value: (P > |t|) < 0.05)
 * From Conditional number, strong multicollinearity or numerical instability affects model
 
 #### Comments
+Investments in TV, press and online were highly scored in feature importance or highly correlated.
+Stores opened, weather index, economy index and brand knowledge were highly scored or highly correlated.
+Maybe public holidays achive less importance or not significant correlations.
 
+### 9. Model validation
+Split dataset to fitting and validation parts. At first step, fit the first part and use additional four weeks for validation. In the next step, remove earliest four week in fitting part, add four validation weeks (from previous step) into fitting part, provide fit and additional fours week use for validation. Repeat until end of dataset.
 
+#### 9A. Predictive power 
+* Check root mean square error (RMSE) as function of validated months
+* Check mean absolute percentage error (MAPE) as function of validated months
+* Check mean absolute error (MAE) as function of validated months
+* Check coefficient of determination ($\mathrm{R}^2$) as function of validated months
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/7c906bb4-48c5-4e52-b06c-06624451c80a" />
+<img width="856" height="275" alt="image" src="https://github.com/user-attachments/assets/f4ba4678-b38d-40ca-b100-e67ad0af1ba5" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/a7c9c9da-fde0-446c-8ccf-8138b44a0d68" />
 
+#### 9B. Stability of coefficients
+* Check sign of coefficients as function of fitted interval
+* Check magnitude of coefficients as function of fitted interval
+* Check error of magnitudes as function of fitted interval
+<img width="856" height="278" alt="image" src="https://github.com/user-attachments/assets/df01ce31-5450-40cc-8ccd-ee1c6c68ec1f" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/8f4c05f4-0078-4140-ae68-6b61024e47af" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/818e2efd-67ba-47b1-b266-286e16a48fe0" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/ce83d205-ac03-43cd-aaa6-ac31f7fcb227" />
+<img width="856" height="284" alt="image" src="https://github.com/user-attachments/assets/2a53e366-190d-4f01-9181-a20a58908582" />
 
-## 4. Results
-| Variable | Coefficient | p-value | Interpretation |
-|----------|------------|--------|----------------|
-| investment_tv | 2.06e6 | 0.79 | Small effect |
-| investment_online | 1.08e11 | 0.000 | Strong effect |
+#### 9C. Residual diagnostics
+* Plot predicted values, fitted values and its residuals (very simple)
+<img width="960" height="339" alt="image" src="https://github.com/user-attachments/assets/ab1d5734-4cb6-4e68-b922-aa21f6ab1c23" />
 
-## 5. Diagnostics
-- F-test p = 0.0146 → model significant
-- Durbin-Watson = 1.7 → acceptable autocorrelation
-- Condition number = 1.14e9 → multicollinearity warning
+#### 9D. Contribution plausibility
+* Compare contribution of marketing channel in investments and sales
 
-## 6. Visualizations
-- Sales vs predicted sales plot
-- Channel ROI bar chart
+#### 9E. Behavioral sanity checks
+* Check if diminishing returns is realistic (expert eye?)
+* Check if add memory is realistic (expert eye?)
 
-## 7. Conclusion
-- Online advertising has the largest impact
-- TV and banners are less effective
-- Model is statistically valid for forecasting and ROI estimation
+#### 9F. Sensitivity analysis
+* Remove one channel, refit and check result, any significant difference?
+* Increase or decrease addMemory and diminishingReturns parameters about 10%
+
+#### 11A. Channel contribution to sales 
+<img width="435" height="284" alt="image" src="https://github.com/user-attachments/assets/5a8ec183-fc50-45ec-981d-daff3a858d85" />
+
+It looks the main contribution on sales ~ 50% has invenstment to online, then ~ 35 % has investment to TV, following with ~ 15 % investment to press. Investment to radio is very close zero and investment to radio is negative (it can be interpret as zero with fluctuation of model fit)
+
+#### 11B. Marketing efficiency
+<img width="434" height="284" alt="image" src="https://github.com/user-attachments/assets/3915d77c-01c8-4f74-9512-49aa99c49162" />
+
+It looks the most efficient is investment to radio more than 4, then investment to press about 2.5, following with investment to TV close to 2. The investment to online is effective about 1.5. The efficinecy of investment to banners is negative, what proving our idea, this channel is not relevant for both contribution in sales and efficiency. 
+
+The funny observation is that contribution in sales has opposite order in compare to efficiency. Would be nice to understand why. 
+
+### 10. What and how to present results to client (SlidesForClient.pdf)
+* Describe data preparation and implementation of behavioral findings to model
+* Simple statistical, mathematical view to model result
+* Show marketing iteresting results
+
+### 12. 
