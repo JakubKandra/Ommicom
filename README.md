@@ -96,6 +96,26 @@ After applying behavioral findings and setting Ordinary Least Squares (OLS) mode
 <img width="1042" height="675" alt="image" src="https://github.com/user-attachments/assets/6d4837d6-01f2-455d-9d5e-4489eed2ea73" />
 <img width="1043" height="216" alt="image" src="https://github.com/user-attachments/assets/bd3bfdd8-a879-4ba6-b064-8e93524691eb" />
 
+### 8. Comments to weekly model
+#### Marketing:
+Several variables (columns) look important (according p-value: (P > |t|) < 0.05):
+* Investments - TV
+* Investments - Press
+* Investments - Online
+* Public holidays
+* Stores open
+* Weather index
+* Economy index
+* Brand knowledge
+
+#### Statistics
+* From R-squared, 74% of sales is explained by model
+* From Prob(F-statistics), the model is statistically significant (p < 0.01)
+* From Prob(Ommibus) or Prob(Jarque-Bera), residuals looks normal (p > 0.05)
+* From Durbin-Watson, residuals look independent (p ~ 2)
+* From Conditional number, strong multicollinearity or numerical instability affects model
+
+#### Comments
 
 
 
