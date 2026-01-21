@@ -53,9 +53,37 @@ These variables could explain some trends in targeting variable as periodicity o
 
 These variables could be interesting for working with monthly dataset
 
-## 3. Model
-- Fitted OLS regression: sales ~ investment_tv + investment_online + ...
-- Checked assumptions: residuals, autocorrelation, multicollinearity
+## 3. Can we do pre-selection?
+Strategy:
+  * Check correlation
+  * Check feature of importance in regression fit by machine learning model (xgboost)
+<img width="641" height="486" alt="image" src="https://github.com/user-attachments/assets/00df7348-8dc9-4cb7-a8d8-39bbb8941939" />
+
+Maybe columns as 'investments_competition_2', 'investments_competition_1', 'investments_banners', 'precipation_index' and 'investments_competition' can be removed from analysis.
+
+<img width="530" height="377" alt="image" src="https://github.com/user-attachments/assets/fd78cc47-9861-456b-90da-fbac86bcbf44" />
+
+Low importance was found for 'investments_competition_2', 'economy_index', 'public_holidays' and 'stores_open'. 
+
+## 5. Apply pre-selection to dataset
+I did some checks, but I am not sure if it is relevant enough to remove any column from final model. I will keep all variables.
+
+## 4. Variables (columns) format
+In my understanding, there is no reason to apply any correction to variables to be ready for final model
+
+### 6. Behavioral findings using diminishing returns and influencing ads immediately with memory
+- For diminishing returns we are using Hill or S-curve:
+\begin{equation*}
+f(x) = \frac{x^{\gamma}}{x^{\gamma}+k^{\gamma}}
+\end{equation*}
+
+- For ads memory we are using "decay law":
+\begin{equation*}
+x(t) = \mathrm{Investments}(t) + \lambda \cdot x(t-1), \mathrm{where} \ 0 \ \leq \ \lambda \ \leq \ 1 
+\end{equation*}
+
+- Both functions requires specific parameters ($\gamma$, k, $\lambda$). These parameters are extracted from data as:
+  + $\gamma$: np.percentile(series, 70) # where zeros are removed from series 
 
 ## 4. Results
 | Variable | Coefficient | p-value | Interpretation |
