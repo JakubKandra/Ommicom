@@ -1,8 +1,13 @@
 # Junior Data Scientist - media & advertising Task
 ## Solution developed by Jakub Kandra
 
-## 1. Introduction
-We aim to estimate the impact of marketing investments on sales using weekly data.
+## 0. Introduction
+Directory is composed by:
+- data files: "data_monthly.csv", "data_weekly.csv",
+- description of task: "homework_new_hires_v2026.html",
+- solution of task in iPython notebook: "Solution.ipynb",
+- slides as aswer of 10. point "SlidesForClient.pdf"
+- this file "Solution.md"
 
 ## 2. Data Preparation
 - Loaded data from `weekly_sales.csv`
