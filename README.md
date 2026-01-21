@@ -92,7 +92,7 @@ $$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$ [3, 13].
 You can also use fenced code blocks for display math:
 ```math
 \sum_{i=1}^{n} (x_i - \bar{x})^2
-``` [7, 13].
+math``` [7, 13].
 
 ## 4. Results
 | Variable | Coefficient | p-value | Interpretation |
