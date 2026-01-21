@@ -72,27 +72,17 @@ I did some checks, but I am not sure if it is relevant enough to remove any colu
 In my understanding, there is no reason to apply any correction to variables to be ready for final model
 
 ### 6. Behavioral findings using diminishing returns and influencing ads immediately with memory
-- For diminishing returns we are using Hill or S-curve:
+- For diminishing returns we are using Hill function or S-curve:
 $$ f(x) = \frac{x^{\gamma}}{x^{\gamma}+k^{\gamma}} $$
-
+**Hill function**\
+$$ f(x) = \frac{x^{\gamma}}{x^{\gamma}+k^{\gamma}} $$
 - For ads memory we are using "decay law":
+**Decay law**\
 $$ x(t) = \mathrm{Investments}(t) + \lambda \cdot x(t-1), \mathrm{where} \ 0 \ \leq \ \lambda \ \leq \ 1 $$
 
 - Both functions requires specific parameters ($\gamma$, k, $\lambda$). These parameters are extracted from data as:
   + $\gamma$: np.percentile(series, 70); where zeros are removed from series
   + 
-
-### My Awesome Equation Section
-
-This is an inline equation: $a^2 + b^2 = c^2$ [3, 13].
-
-Here is a more complex display equation for the quadratic formula:
-$$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$ [3, 13].
-
-You can also use fenced code blocks for display math:
-```math
-\sum_{i=1}^{n} (x_i - \bar{x})^2
-math``` [7, 13].
 
 ## 4. Results
 | Variable | Coefficient | p-value | Interpretation |
