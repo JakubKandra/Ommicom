@@ -73,17 +73,13 @@ In my understanding, there is no reason to apply any correction to variables to 
 
 ### 6. Behavioral findings using diminishing returns and influencing ads immediately with memory
 - For diminishing returns we are using Hill or S-curve:
-\begin{equation*}
-f(x) = \frac{x^{\gamma}}{x^{\gamma}+k^{\gamma}}
-\end{equation*}
+$$ f(x) = \frac{x^{\gamma}}{x^{\gamma}+k^{\gamma}} $$
 
 - For ads memory we are using "decay law":
-\begin{equation*}
-x(t) = \mathrm{Investments}(t) + \lambda \cdot x(t-1), \mathrm{where} \ 0 \ \leq \ \lambda \ \leq \ 1 
-\end{equation*}
+$$ x(t) = \mathrm{Investments}(t) + \lambda \cdot x(t-1), \mathrm{where} \ 0 \ \leq \ \lambda \ \leq \ 1 $$
 
 - Both functions requires specific parameters ($\gamma$, k, $\lambda$). These parameters are extracted from data as:
-  + $\gamma$: np.percentile(series, 70) # where zeros are removed from series 
+  + $\gamma$: np.percentile(series, 70); where zeros are removed from series 
 
 ## 4. Results
 | Variable | Coefficient | p-value | Interpretation |
