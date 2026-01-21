@@ -73,25 +73,22 @@ In my understanding, there is no reason to apply any correction to variables to 
 
 ### 6. Behavioral findings using diminishing returns and influencing ads immediately with memory
 - For diminishing returns we are using Hill function or S-curve:
-$$ f(x) = \frac{x^{\gamma}}{x^{\gamma}+k^{\gamma}} $$
-**Hill function**\
-$$ f(x) = \frac{x^{\gamma}}{x^{\gamma}+k^{\gamma}} $$
+
+**Hill function**
+```math
+f(x) = \frac{x^{\gamma}}{x^{\gamma}+k^{\gamma}}
+```
+
 - For ads memory we are using "decay law":
-**Decay law**\
-$$ x(t) = \mathrm{Investments}(t) + \lambda \cdot x(t-1), \mathrm{where} \ 0 \ \leq \ \lambda \ \leq \ 1 $$
+
+**Decay law**
+```math
+x(t) = \mathrm{Investments}(t) + \lambda \cdot x(t-1), \mathrm{where} \ 0 \ \leq \ \lambda \ \leq \ 1
+```
 
 - Both functions requires specific parameters ($\gamma$, k, $\lambda$). These parameters are extracted from data as:
   + $\gamma$: np.percentile(series, 70); where zeros are removed from series
   + 
-
-**The Cauchy-Schwarz Inequality**
-
-```math
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-```
-
-**The Cauchy-Schwarz Inequality**\
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
 
 
 
