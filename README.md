@@ -3,7 +3,7 @@
 
 ## 0. Introduction
 Directory is composed by:
-- data files: "data_monthly.csv", "data_weekly.csv",
+- data files: "data_monthly.csv" and "data_weekly.csv",
 - description of task: "homework_new_hires_v2026.html",
 - solution of task in iPython notebook: "Solution.ipynb",
 - slides as answer to client "SlidesForClient.pdf"
