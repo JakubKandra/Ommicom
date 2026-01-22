@@ -68,7 +68,7 @@ Low importance was found for 'investments_competition_2', 'economy_index', 'publ
 ## 5. Apply pre-selection to dataset
 I did some checks, but I am not sure if it is relevant enough to remove any column from final model. I will keep all variables.
 
-## 4. Variables (columns) format
+## 4. Variables format
 In my understanding, there is no reason to apply any correction to variables to be ready for final model
 
 ## 6. Behavioral findings using diminishing returns and influencing ads immediately with memory
@@ -87,7 +87,7 @@ x(t) = \mathrm{Investments}(t) + \lambda \cdot x(t-1), \mathrm{where} \ 0 \ \leq
   + k: 1 + np.log10(series.std() + 1)
   + $\lambda$: min(max(autocorr_weekly, 0.05), 0.9)
  
-## 7. Building a marketing mix model(s)
+## 7. Building a marketing mix model
 I prepared two models based on weekly and monthly datasets.
 Probably, there could be some variables which will behave differently in these models.
 Otherwise the monthly model can be as a proof for same observations in weekly model (as control model). 
@@ -96,7 +96,7 @@ After applying behavioral findings and setting Ordinary Least Squares (OLS) mode
 <img width="1042" height="675" alt="image" src="https://github.com/user-attachments/assets/6d4837d6-01f2-455d-9d5e-4489eed2ea73" />
 <img width="1043" height="216" alt="image" src="https://github.com/user-attachments/assets/bd3bfdd8-a879-4ba6-b064-8e93524691eb" />
 
-### 8. Comments to weekly model
+### 8. Comments to model
 #### Marketing:
 Several variables (columns) look important (according p-value: (P > |t|) < 0.05):
 * Investments - TV
@@ -115,7 +115,7 @@ Several variables (columns) look important (according p-value: (P > |t|) < 0.05)
 * From Durbin-Watson, residuals look independent (p ~ 2)
 * From Conditional number, strong multicollinearity or numerical instability affects model
 
-#### Comments
+#### Comparison with pre-selection studies
 Investments in TV, press and online were highly scored in feature importance or highly correlated.
 Stores opened, weather index, economy index and brand knowledge were highly scored or highly correlated.
 Maybe public holidays achive less importance or not significant correlations.
@@ -141,6 +141,8 @@ Split dataset to fitting and validation parts. At first step, fit the first part
 <img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/818e2efd-67ba-47b1-b266-286e16a48fe0" />
 <img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/ce83d205-ac03-43cd-aaa6-ac31f7fcb227" />
 <img width="856" height="284" alt="image" src="https://github.com/user-attachments/assets/2a53e366-190d-4f01-9181-a20a58908582" />
+
+Fluctuation of investment to radio demosntrate a strange bahaviour and the errrors diverge for last two points. Removing last two points, fluctuation is consistent with other marketing channels. It would be nice to check in dataset, if there is some rational explanation this situation. 
 
 #### 9C. Residual diagnostics
 * Plot predicted values, fitted values and its residuals (very simple)
@@ -174,4 +176,6 @@ The funny observation is that contribution in sales has opposite order in compar
 * Simple statistical, mathematical view to model result
 * Show marketing iteresting results
 
-### 12. 
+### 12. Finding optimal marketing mix
+Firstly, we should provide enough checks to be sure our model is consistent, otherwise we need to set more realistic (optimal) with stable coeficients, efficient and nice explain channel contribution to sales. 
+This model then can be optimized. For optimization we need to know what a client what to optimized and what is his constraints. After clear evidence of optimization task we can start look for optimal marketing mix. In principle optimization is looking for maximum or minimum a function which clearly defined a client expectations and constraints.
