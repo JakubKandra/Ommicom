@@ -41,6 +41,8 @@ It could affect targeting variable
 <img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/096840ff-367b-4f98-8bdf-9b2700b200e3" />
 <img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/b4ebc767-ec43-42df-8293-e517cf532275" />
 <img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/d5807473-bf95-46de-8001-78454f8b8673" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/de76f110-0344-4356-8bbd-0ea294ef7560" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/e8969365-f4f8-4518-8b99-c0cdc1892356" />
 
 These variables could explain some trends in targeting variable as periodicity or slow decreasing.
 
@@ -86,6 +88,8 @@ x(t) = \mathrm{Investments}(t) + \lambda \cdot x(t-1), \mathrm{where} \ 0 \ \leq
   + $\gamma$: np.percentile(series, 70); where zeros are removed from series
   + k: 1 + np.log10(series.std() + 1)
   + $\lambda$: min(max(autocorr_weekly, 0.05), 0.9)
+<img width="855" height="280" alt="image" src="https://github.com/user-attachments/assets/efa168d7-1260-43f1-97ed-a4d868f92f97" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/6a23a99e-ec72-4df8-a129-6445e643e954" />
  
 ## 7. Building a marketing mix model
 I prepared two models based on weekly and monthly datasets.
@@ -130,17 +134,17 @@ Split dataset to fitting and validation parts. At first step, fit the first part
 * Check coefficient of determination ($\mathrm{R}^2$) as function of validated months
 <img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/7c906bb4-48c5-4e52-b06c-06624451c80a" />
 <img width="856" height="275" alt="image" src="https://github.com/user-attachments/assets/f4ba4678-b38d-40ca-b100-e67ad0af1ba5" />
-<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/a7c9c9da-fde0-446c-8ccf-8138b44a0d68" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/4186b0bd-7c36-4ac5-b979-eed2fccbfc36" />
 
 #### 9B. Stability of coefficients
 * Check sign of coefficients as function of fitted interval
 * Check magnitude of coefficients as function of fitted interval
 * Check error of magnitudes as function of fitted interval
-<img width="856" height="278" alt="image" src="https://github.com/user-attachments/assets/df01ce31-5450-40cc-8ccd-ee1c6c68ec1f" />
-<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/8f4c05f4-0078-4140-ae68-6b61024e47af" />
-<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/818e2efd-67ba-47b1-b266-286e16a48fe0" />
-<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/ce83d205-ac03-43cd-aaa6-ac31f7fcb227" />
-<img width="856" height="284" alt="image" src="https://github.com/user-attachments/assets/2a53e366-190d-4f01-9181-a20a58908582" />
+<img width="856" height="278" alt="image" src="https://github.com/user-attachments/assets/ff7109c8-f937-4ab5-9556-cee74bc85de9" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/33a10805-8fa0-4c8f-9470-e8f8bc9152e5" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/0cf9e8f2-4362-4beb-a3c8-af0c28fd5ed7" />
+![Uploading image.png…]()
+![Uploading image.png…]()
 
 Fluctuation of investment to radio demosntrate a strange bahaviour and the errrors diverge for last two points. Removing last two points, fluctuation is consistent with other marketing channels. It would be nice to check in dataset, if there is some rational explanation this situation. 
 
