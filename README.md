@@ -1,4 +1,4 @@
-# Junior Data Scientist - media & advertising Task
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/0589ce02-68ea-4918-a4e0-1d57f377915b" /># Junior Data Scientist - media & advertising Task
 ## Solution developed by Jakub Kandra
 
 ## 0. Introduction
@@ -143,8 +143,8 @@ Split dataset to fitting and validation parts. At first step, fit the first part
 <img width="856" height="278" alt="image" src="https://github.com/user-attachments/assets/ff7109c8-f937-4ab5-9556-cee74bc85de9" />
 <img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/33a10805-8fa0-4c8f-9470-e8f8bc9152e5" />
 <img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/0cf9e8f2-4362-4beb-a3c8-af0c28fd5ed7" />
-![Uploading image.png…]()
-![Uploading image.png…]()
+<img width="856" height="284" alt="image" src="https://github.com/user-attachments/assets/199595c6-7cbf-4d25-9e3f-615314413264" />
+<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/e2dee00c-0c68-4378-8473-514349d9f0fb" />
 
 Fluctuation of investment to radio demosntrate a strange bahaviour and the errrors diverge for last two points. Removing last two points, fluctuation is consistent with other marketing channels. It would be nice to check in dataset, if there is some rational explanation this situation. 
 
