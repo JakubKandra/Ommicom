@@ -1,4 +1,4 @@
-<img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/0589ce02-68ea-4918-a4e0-1d57f377915b" /># Junior Data Scientist - media & advertising Task
+# Junior Data Scientist - media & advertising Task
 ## Solution developed by Jakub Kandra
 
 ## 0. Introduction
