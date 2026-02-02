@@ -87,7 +87,7 @@ x(t) = \mathrm{Investments}(t) + \lambda \cdot x(t-1), \mathrm{where} \ 0 \ \leq
 - Both functions requires specific parameters ($\gamma$, k, $\lambda$). These parameters are extracted from data as:
   + $\gamma$: np.percentile(series, 70); where zeros are removed from series
   + k: 1 + np.log10(series.std() + 1)
-  + $\lambda$: min(max(autocorr_weekly, 0.05), 0.9)
+  + $\lambda$: min(max(series.autocorr(lag=1), 0.05), 0.9)
 <img width="855" height="280" alt="image" src="https://github.com/user-attachments/assets/efa168d7-1260-43f1-97ed-a4d868f92f97" />
 <img width="856" height="280" alt="image" src="https://github.com/user-attachments/assets/6a23a99e-ec72-4df8-a129-6445e643e954" />
  
